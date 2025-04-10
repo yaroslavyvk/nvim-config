@@ -58,14 +58,14 @@ require('mason').setup()
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
 local servers = {
-  -- При потребі додавай тут свої сервери, наприклад:
-  -- "yamlls",
-  -- "pyright",
+  "yamlls",
+  "pyright",
 }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
   ensure_installed = servers,
+  automatic_installation = true,
 }
 
 -- nvim-cmp supports additional completion capabilities
